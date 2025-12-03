@@ -1,0 +1,27 @@
+# Visual Studio temporary files
+.vs/
+*.user
+*.userosscache
+*.suo
+
+# Build output
+bin/
+obj/
+
+# NuGet
+packages/
+*.nupkg
+
+# Logs
+*.log
+
+# Others
+*.dbmdl
+*.cache
+*.pidb
+*.svclog
+*.sdf
+
+# Rider / Resharper
+.idea/
+*.DotSettings.user

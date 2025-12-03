@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\us\\Downloads\\Javascript\\backend\\MyFirstApp\\MyFirstApp.csproj": {}
+    "C:\\Users\\us\\Downloads\\Javascript\\frontendPractice\\backend_practice\\MyFirstApp\\MyFirstApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\us\\Downloads\\Javascript\\backend\\MyFirstApp\\MyFirstApp.csproj": {
+    "C:\\Users\\us\\Downloads\\Javascript\\frontendPractice\\backend_practice\\MyFirstApp\\MyFirstApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\us\\Downloads\\Javascript\\backend\\MyFirstApp\\MyFirstApp.csproj",
+        "projectUniqueName": "C:\\Users\\us\\Downloads\\Javascript\\frontendPractice\\backend_practice\\MyFirstApp\\MyFirstApp.csproj",
         "projectName": "MyFirstApp",
-        "projectPath": "C:\\Users\\us\\Downloads\\Javascript\\backend\\MyFirstApp\\MyFirstApp.csproj",
+        "projectPath": "C:\\Users\\us\\Downloads\\Javascript\\frontendPractice\\backend_practice\\MyFirstApp\\MyFirstApp.csproj",
         "packagesPath": "C:\\Users\\us\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\us\\Downloads\\Javascript\\backend\\MyFirstApp\\obj\\",
+        "outputPath": "C:\\Users\\us\\Downloads\\Javascript\\frontendPractice\\backend_practice\\MyFirstApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
