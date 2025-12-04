@@ -1,27 +1,125 @@
-# Visual Studio temporary files
-.vs/
-*.user
-*.userosscache
-*.suo
+###############################
+#     .NET / .NET Core        #
+###############################
 
-# Build output
+# Build outputs
 bin/
 obj/
+Debug/
+Release/
+build/
+x64/
+x86/
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+*.cache
+*.opendb
+*.VC.db
+
+# Compiled binaries
+*.dll
+*.exe
+*.app
+*.appx
+*.msi
+*.apk
+*.aab
+*.pdb
+
+# Config secrets (optional)
+appsettings.*.json
 
 # NuGet
-packages/
 *.nupkg
+packages/
+project.lock.json
+project.assets.json
+
+# Publish folder
+**/publish/
+
+# Rider / JetBrains
+.idea/
+*.sln.iml
+
+# Test results
+TestResult*/
+*.coverage
+*.coveragexml
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+###############################
+#     Angular / Node / JS     #
+###############################
+
+# Node modules
+node_modules/
+
+# Angular build output
+dist/
+out-tsc/
+tmp/
+
+# Angular cache
+.angular/
+.angular/cache/
+
+# Environment files (keep them private)
+src/environments/environment.ts
+src/environments/environment.prod.ts
+
+# TypeScript
+*.tsbuildinfo
 
 # Logs
-*.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+pnpm-debug.log
 
-# Others
-*.dbmdl
-*.cache
-*.pidb
-*.svclog
-*.sdf
+# AoT build
+*.ngfactory.ts
+*.ngsummary.json
 
-# Rider / Resharper
-.idea/
-*.DotSettings.user
+# VS Code
+.vscode/
+.history/
+
+###############################
+#     JavaScript / Frontend   #
+###############################
+
+# npm/yarn/pnpm lock files (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Browser builds
+*.map
+*.bundle.js
+*.bundle.js.map
+
+# Coverage
+coverage/
+
+###############################
+#     General OS Files        #
+###############################
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Mac
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Linux
+*~

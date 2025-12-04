@@ -28,3 +28,19 @@ function smallestNu(arr) {
     return result;
 }
 console.log(smallestNu([2, 4, 1, 5, 6, 1]));
+
+// Ascending Order / Descending Order
+function bubbleSort(arr) {
+    var _a;
+    var n = arr.length;
+    for (var i = 0; i < n - 1; i++) {
+        for (var j = 0; j < n - i - 1; j++) {
+            if (arr[j] > arr[j + 1]) {
+                _a = [arr[j + 1], arr[j]], arr[j] = _a[0], arr[j + 1] = _a[1];
+            }
+        }
+    }
+    return arr;
+}
+var numbers = [10, 2, 30, 4];
+console.log(bubbleSort(numbers));

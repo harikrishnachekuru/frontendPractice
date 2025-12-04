@@ -37,3 +37,23 @@ function pairSumFunc(arr, target){
 }
 
 console.log(pairSumFunc([1,2,3,4,5,6],10));
+
+//using Map 
+
+function pairSm(nums, target) {
+    let map = new Map();
+
+    for (let i = 0; i < nums.length; i++) {
+        let complement = target - nums[i];
+
+        if (map.has(complement)) {
+            return [map.get(complement), i];
+        }
+
+        map.set(nums[i], i);
+    }
+    
+    return [];
+};
+
+console.log(pairSm([1,2,3,2,3,4,2],3));

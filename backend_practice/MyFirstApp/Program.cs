@@ -98,5 +98,38 @@ class Program
         b1.Deposit(12);
         b1.Withdraw(5);
         b1.DisplayBalance();
+
+        List<int> nums = new List<int>();
+        nums.Add(1);
+        nums.Add(2);
+        nums.Add(3);
+        nums.Add(4);
+        nums.Add(5);
+
+        Console.WriteLine("All numbers:");
+        foreach (int n in nums)
+        {
+            Console.WriteLine(n);
+            Console.WriteLine("Total Sum: " + nums.Sum());
+            Console.WriteLine("Highest Number: " + nums.Max());
+        }
+
+        // Total sum
+        int sum = 0;
+        foreach (int n in nums)
+        {
+            sum += n;
+        }
+        Console.WriteLine("\nTotal Sum: " + sum);
+
+        // Highest number
+        int highest = nums[0];
+        foreach (int n in nums)
+        {
+            if (n > highest)
+                highest = n;
+        }
+        Console.WriteLine("Highest Number: " + highest);
     }
+
 }
