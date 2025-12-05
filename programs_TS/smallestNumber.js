@@ -28,7 +28,16 @@ function smallestNu(arr) {
     return result;
 }
 console.log(smallestNu([2, 4, 1, 5, 6, 1]));
-
+//Largest Number from the given array
+function max(arr) {
+    var m = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] > m)
+            m = arr[i];
+    }
+    return m;
+}
+console.log(max([2, 4, 1, 5, 6, 1]));
 // Ascending Order / Descending Order
 function bubbleSort(arr) {
     var _a;

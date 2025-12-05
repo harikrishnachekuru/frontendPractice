@@ -22,3 +22,11 @@ function reverseFunct(arr) {
     return arr;
 }
 console.log(reverseFunct([1, 2, 3, 4, 5, 6]));
+function reverse(str) {
+    var rev = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        rev += str[i];
+    }
+    return rev;
+}
+console.log(reverse("albthri"));

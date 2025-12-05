@@ -47,3 +47,16 @@ function dupfind(arr) {
     return dup
 }
 console.log(dupfind([1,2,32,3,2,1,2,32]));
+
+//Another simple way 
+
+function removeDup(arr){
+  let result = [];
+  for(let i=0;i<arr.length;i++){
+    if(result.indexOf(arr[i]) === -1){
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+console.log(removeDup([1,2,32,3,2,1,2,32]));

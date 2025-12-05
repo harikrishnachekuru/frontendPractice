@@ -34,7 +34,7 @@ function PalindromeFunct(str){
     for(let i = str.length-1; i>=0; i--){
         result += str[i];
     }
-    return str === result ? true : false;
+    return str === result;
 }
 console.log(PalindromeFunct("level"));
 
