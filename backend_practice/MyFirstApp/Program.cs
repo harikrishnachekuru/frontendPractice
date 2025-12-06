@@ -130,6 +130,24 @@ class Program
                 highest = n;
         }
         Console.WriteLine("Highest Number: " + highest);
+
+        List<int> numbs = new List<int> { 5, 10, 15, 20, 25, 30 };
+        
+        var result = numbs.Where(n => n > 15);
+        foreach (var n in result)
+        {
+            Console.WriteLine(n);
+        }
+
+        var newRes = numbs.Where(n => n % 2 == 0);
+
+        foreach (int n in newRes)
+        {
+            Console.WriteLine(n);
+        }
+
+        Console.WriteLine($"Highest Number: {numbs.Max()}");
+        Console.WriteLine($"Sum of the Numbers: {numbs.Sum()}");
     }
 
 }
