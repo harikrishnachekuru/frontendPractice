@@ -22,6 +22,7 @@ function reverseFunct(arr) {
     return arr;
 }
 console.log(reverseFunct([1, 2, 3, 4, 5, 6]));
+// string reverse
 function reverse(str) {
     var rev = "";
     for (var i = str.length - 1; i >= 0; i--) {
@@ -30,3 +31,31 @@ function reverse(str) {
     return rev;
 }
 console.log(reverse("albthri"));
+// Reversing each word from the satement
+function reverseCharsInWordsBuiltIn(s) {
+    return s.split(' ').map(function (w) { return w.split('').reverse().join(''); }).join(' ');
+}
+console.log(reverseCharsInWordsBuiltIn("the sky is blue")); // "eht yks si eulb"
+function reverseCharsInWords(s) {
+    var res = [];
+    var word = [];
+    for (var i = 0; i <= s.length; i++) {
+        if (i === s.length || s[i] === ' ') {
+            // reverse word
+            for (var j = word.length - 1; j >= 0; j--)
+                res.push(word[j]);
+            if (i !== s.length)
+                res.push(' ');
+            word = [];
+        }
+        else {
+            word.push(s[i]);
+        }
+    }
+    return res.join('');
+}
+console.log(reverseCharsInWords("the sky is blue")); // "eht yks si eulb"
+function reverseWords(str) {
+    return str.split(" ").reverse().join(" ");
+}
+console.log(reverseWords("the sky is blue"));

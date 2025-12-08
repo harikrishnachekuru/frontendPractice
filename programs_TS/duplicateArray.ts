@@ -12,6 +12,13 @@ function dupli(arr){
 }
 console.log(dupli([1,2,1,3,4,2]));
 
+// removing duplicates and printing unique values 
+
+function duplic(arr){
+    return [...new Set(arr)];
+}
+console.log(duplic([1,2,1,3,4,2]));
+
 // using freq to have performance and time Complexity is O(n)
 
 function dup(arr) {

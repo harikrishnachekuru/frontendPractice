@@ -18,6 +18,10 @@ function dupli(arr) {
     return __spreadArray([], new Set(arr.filter(function (val, index) { return arr.indexOf(val) !== index; })), true);
 }
 console.log(dupli([1, 2, 1, 3, 4, 2]));
+function duplic(arr) {
+    return __spreadArray([], new Set(arr), true);
+}
+console.log(duplic([1, 2, 1, 3, 4, 2]));
 // using freq to have performance and time Complexity is O(n)
 function dup(arr) {
     var freq = {};

@@ -64,3 +64,10 @@ function reverseCharsInWords(s) {
 }
 
 console.log(reverseCharsInWords("the sky is blue")); // "eht yks si eulb"
+
+//statement reverse
+
+function reverseWords(str) {
+  return str.split(" ").reverse().join(" ");
+}
+console.log(reverseWords("the sky is blue"));
