@@ -4,4 +4,39 @@
     {{ p.id }} - {{ p.name }}
   }
 </h2>
+
+<h1>CRUD Operation</h1>
+<button (click)="load()">Load products</button>
+<h2>Post Method</h2>
+<button (click)="add()">Add Product</button>
+<h2>Update Method</h2>
+<button (click)="put()">Update Product</button>
+<h2>Delete Method</h2>
+<button (click)="remove()">Delete Product</button>
+
+
+
+<hr>
+
+
+<ul>
+  <li>
+    @for(p of products; track p.id){
+      {{ p.id }} - {{ p.name }}
+      <button (click)="edit(p)">Edit</button>
+      <button (click)="delete(p.id)">Delete</button>
+    }
+  </li>
+</ul>
+
+<h2>{{ isEdit ? 'Update Product' : 'Add Product' }}</h2>
+
+<form (ngSubmit) = "submit()">
+  <label>Name</label>
+  <input [(ngModel)] = "form.name" name = "name" required />
+
+  <button type="submit">{{ isEdit ? 'Update' : 'Add' }}</button>
+  <button type="button" (click)="resetForm()">Cancel</button>
+</form>
+
 <router-outlet />

@@ -12,4 +12,16 @@ export class Product {
   getProducts() {
     return this.http.get(this.Api_Url);
   }
+  addProduct(data:any){
+    return this.http.post(this.Api_Url, data);
+  }
+
+  updateProduct(id:number, data:any){
+    return this.http.put(`${this.Api_Url}/${id}`, data);
+  }
+
+  removeProduct(id:number){
+    return this.http.delete(`${this.Api_Url}/${id}`);
+  }
+  
 }
