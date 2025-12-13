@@ -2,10 +2,11 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Product } from './services/product';
 import { FormsModule } from '@angular/forms';
+import { Tasks } from './Component/tasks/tasks';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,FormsModule],
+  imports: [RouterOutlet,FormsModule, Tasks],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

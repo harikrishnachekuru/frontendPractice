@@ -32,6 +32,24 @@ namespace ManagementApi.Data
                 Dependencies = new (),
                 CreatedAt = DateTime.Parse("2024-03-20T10:00:00Z"),
                 UpdatedAt = DateTime.Parse("2024-03-20T10:00:00Z")
+            },
+            new ManagementModel
+            {
+                Id = "task-456",
+                Title = "Sanity Purpose of 456 entry",
+                Description = "Description",
+                Dependencies = new (),
+                CreatedAt = DateTime.Parse("2024-03-20T10:00:00Z"),
+                UpdatedAt = DateTime.Parse("2024-03-20T10:00:00Z")
+            },
+            new ManagementModel
+            {
+                Id = "task-789",
+                Title = "Sanity Purpose of 789 entry",
+                Description = "Description",
+                Dependencies = new List<string> {"test-2"},
+                CreatedAt = DateTime.Parse("2024-03-20T10:00:00Z"),
+                UpdatedAt = DateTime.Parse("2024-03-20T10:00:00Z")
             }
         };
     }

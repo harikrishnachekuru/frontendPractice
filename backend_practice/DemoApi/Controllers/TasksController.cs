@@ -57,5 +57,43 @@ namespace TaskApi.Controllers
 
             return Ok(result);
         }
+        //[HttpPost]
+        //public IActionResult CreateTask([FromBody] TaskModel newTask)
+        //{
+        //    newTask.Id = $"task-{Guid.NewGuid().ToString().Substring(0, 6)}";
+        //    newTask.CreatedAt = DateTime.UtcNow;
+        //    newTask.UpdatedAt = DateTime.UtcNow;
+
+        //    tasks.Add(newTask);
+        //    return Ok(newTask);
+        //}
+
+
+        //[HttpPut("{id}")]
+        //public IActionResult UpdateTask(string id, [FromBody] TaskModel updated)
+        //{
+        //    var existing = tasks.FirstOrDefault(t => t.Id == id);
+        //    if (existing == null)
+        //        return NotFound();
+
+        //    existing.Title = updated.Title;
+        //    existing.Description = updated.Description;
+        //    existing.Dependencies = updated.Dependencies;
+        //    existing.UpdatedAt = DateTime.UtcNow;
+
+        //    return Ok(existing);
+        //}
+
+        //[HttpDelete("{id}")]
+        //public IActionResult DeleteTask(string id)
+        //{
+        //    var task = Tasks.FirstOrDefault(t => t.Id == id);
+        //    if (task == null)
+        //        return NotFound();
+
+        //    Tasks.Remove(task);
+        //    return Ok(new { message = "Task deleted" });
+        //}
+
     }
 }

@@ -29,10 +29,19 @@ namespace TaskApi.Data
                 Id = "task-789",
                 Title = "Initial brainstorming",
                 Description = "Team brainstorming session",
-                Dependencies = new(),
+                Dependencies = new List<string> {"test-1"},
                 CreatedAt = DateTime.Parse("2024-03-20T08:00:00Z"),
                 UpdatedAt = DateTime.Parse("2024-03-20T08:00:00Z")
-            }
+            },
+            new TaskModel
+            {
+                Id = "test-1",
+                Title = "Sanity Purpose of first entry",
+                Description = "Description",
+                Dependencies = new (),
+                CreatedAt = DateTime.Parse("2024-03-20T10:00:00Z"),
+                UpdatedAt = DateTime.Parse("2024-03-20T10:00:00Z")
+            },
         };
     }
 }
