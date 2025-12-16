@@ -5,8 +5,33 @@ using System;
 using MyProject;
 using System.Collections.Generic;
 
+//Learning the deletgate usage
+public delegate void PrintMsg(string msg);
+
+//MultiCast Delegate creation
+public delegate void Calc(int x, int y);
+
+
 class Program
 {
+    //As Delegate is created above creating a methods and using it
+    static void Print(string msg)
+    {
+        Console.WriteLine(msg);
+    }
+
+    //Multicast fields
+    public static void Add(int x, int y)
+    {
+        var Temp = x + y;
+        Console.WriteLine($"The Sum of {x}, {y} is: {Temp}");
+    } 
+    public static void Mul(int x, int y)
+    {
+        var Temp = x* y;
+        Console.WriteLine($"The Mul of {x}, {y} is: {Temp}");
+    } 
+
     public static void Main()
     {
         //Console.WriteLine("Enter Your Name: ");
@@ -148,6 +173,18 @@ class Program
 
         Console.WriteLine($"Highest Number: {numbs.Max()}");
         Console.WriteLine($"Sum of the Numbers: {numbs.Sum()}");
+
+
+        //Calling the Delage to print it 
+        PrintMsg pm = Print;
+        pm("Delegate creation");
+
+        //Method Creation and calling of Multicast delegates
+        Calc cal = Add;
+        cal += Mul;
+        // Note If the return type anything else apart from void it will be stored only the last result.
+        cal(1, 2);
+
     }
 
 }
