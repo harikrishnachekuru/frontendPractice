@@ -185,6 +185,23 @@ class Program
         // Note If the return type anything else apart from void it will be stored only the last result.
         cal(1, 2);
 
+        //Methods – Parameter Passing
+        void Change(int x)
+        {
+            x = 50;
+        }
+        // By Reference
+        void Change(ref int x)
+        {
+            x = 50;
+        }
+
+        //out Parameter
+        void GetValues(out int x)
+        {
+            x = 10;
+        }
+
     }
 
 }
