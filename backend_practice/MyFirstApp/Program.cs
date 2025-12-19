@@ -191,16 +191,25 @@ class Program
             x = 50;
         }
         // By Reference
-        void Change(ref int x)
-        {
-            x = 50;
-        }
+        //void Change(ref int x)
+        //{
+        //    x = 50;
+        //}
 
         //out Parameter
         void GetValues(out int x)
         {
             x = 10;
         }
+
+
+        // String Comparision
+
+        string a = "hello";
+        string b = "HELLO";
+
+        bool result2 = a.Equals(b, StringComparison.OrdinalIgnoreCase);
+        Console.WriteLine(result2);
 
     }
 
