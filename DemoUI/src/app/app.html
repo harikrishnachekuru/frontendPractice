@@ -43,6 +43,8 @@
 
 <hr>
 
-<app-learning [name] = "UserName"></app-learning>
+<app-learning [name1]="UserName"></app-learning>
+
+<p>{{ description | truncate:5 }}</p>
 
 <router-outlet />

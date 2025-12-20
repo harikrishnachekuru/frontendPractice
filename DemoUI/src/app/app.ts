@@ -4,10 +4,10 @@ import { Product } from './services/product';
 import { FormsModule } from '@angular/forms';
 import { Tasks } from './Component/tasks/tasks';
 import { Learning } from './Component/learning/learning';
-
+import { TruncatePipe } from './truncate-pipe';
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,FormsModule, Tasks, Learning],
+  imports: [RouterOutlet,FormsModule, Tasks, Learning,TruncatePipe],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
@@ -22,7 +22,8 @@ export class App implements OnInit{
     name:''
   }
 
-  UserName = "Krish";
+  UserName = 'Krish';
+  description : string = "AmaravatiDeluxe";
 
   isEdit = false;
 
@@ -31,7 +32,7 @@ export class App implements OnInit{
     this.load();
     setTimeout(() => {
       this.UserName = 'Porter';
-    }, 3000);
+    }, 1000);
   }
 
   loadProducts() {

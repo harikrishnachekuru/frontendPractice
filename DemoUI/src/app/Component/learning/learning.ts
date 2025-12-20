@@ -1,14 +1,14 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, DoCheck, Input, OnChanges, OnDestroy, OnInit } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-learning',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './learning.html',
   styleUrl: './learning.css',
 })
 export class Learning implements OnInit,OnChanges,DoCheck, AfterContentInit,AfterViewInit, AfterViewChecked,OnDestroy, AfterContentChecked{
 
-  @Input('UserName') name! : string;
+  @Input() name1!: string;
 
 
   constructor(){
