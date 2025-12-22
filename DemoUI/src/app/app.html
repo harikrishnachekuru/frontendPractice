@@ -1,7 +1,7 @@
-<p>Hey This is angular</p>
+<!-- <p>Hey This is angular</p>
 <h2>
   @for(p of products; track p.id){
-    {{ p.id }} - {{ p.name }}
+  {{ p.id }} - {{ p.name }}
   }
 </h2>
 
@@ -22,18 +22,18 @@
 <ul>
   <li>
     @for(p of products; track p.id){
-      {{ p.id }} - {{ p.name }}
-      <button (click)="edit(p)">Edit</button>
-      <button (click)="delete(p.id)">Delete</button>
+    {{ p.id }} - {{ p.name }}
+    <button (click)="edit(p)">Edit</button>
+    <button (click)="delete(p.id)">Delete</button>
     }
   </li>
 </ul>
 
 <h2>{{ isEdit ? 'Update Product' : 'Add Product' }}</h2>
 
-<form (ngSubmit) = "submit()">
+<form (ngSubmit)="submit()">
   <label>Name</label>
-  <input [(ngModel)] = "form.name" name = "name" required />
+  <input [(ngModel)]="form.name" name="name" required />
 
   <button type="submit">{{ isEdit ? 'Update' : 'Add' }}</button>
   <button type="button" (click)="resetForm()">Cancel</button>
@@ -47,6 +47,14 @@
 
 <p>{{ description | truncate:5 }}</p>
 
-<p appHighlight='green'>Mouse Hover</p>
+<p appHighlight='green'>Mouse Hover</p> -->
 
-<router-outlet />
+<nav>
+  <a routerLink="/home">Home</a> |
+  <a routerLink="/products">Products</a> |
+  <a routerLink="/admin">Admin</a>
+</nav>
+
+<hr />
+
+<router-outlet></router-outlet>
