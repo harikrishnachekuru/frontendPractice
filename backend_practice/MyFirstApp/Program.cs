@@ -11,6 +11,11 @@ public delegate void PrintMsg(string msg);
 //MultiCast Delegate creation
 public delegate void Calc(int x, int y);
 
+class Contact
+{
+    public string Name { get; set; }
+    public int Phone { get; set; }
+}
 
 class Program
 {
@@ -30,7 +35,56 @@ class Program
     {
         var Temp = x* y;
         Console.WriteLine($"The Mul of {x}, {y} is: {Temp}");
-    } 
+    }
+
+    static void AddContact(List<Contact> contacts)
+    {
+        Console.WriteLine("Enter your Name");
+        string name = Console.ReadLine();
+
+        Console.WriteLine("Enter your Mobile Number");
+        if (!int.TryParse(Console.ReadLine(), out int phone))
+        {
+            Console.WriteLine("Invalid phone number.");
+            return;
+        }
+
+        contacts.Add(new Contact { Name = name, Phone = phone });
+        Console.WriteLine("Added");
+    }
+
+    static void ListContact(List<Contact> contacts)
+    {
+        if (contacts.Count == 0)
+        {
+            Console.WriteLine("No Contacts available");
+            return;
+        }
+
+        for (int i = 0; i < contacts.Count; i++)
+        {
+            Console.WriteLine($"{i + 1}. {contacts[i].Name} - {contacts[i].Phone}");
+        }
+    }
+
+    static void RemoveContact(List<Contact> contacts)
+    {
+        Console.Write("Enter the number to remove a contact: ");
+        if (!int.TryParse(Console.ReadLine(), out int y))
+        {
+            Console.WriteLine("Invalid number.");
+            return;
+        }
+
+        if (y < 1 || y > contacts.Count)
+        {
+            Console.WriteLine("Number out of range.");
+            return;
+        }
+
+        contacts.RemoveAt(y - 1);
+        Console.WriteLine("Removed.");
+    }
 
     public static void Main()
     {
@@ -60,7 +114,7 @@ class Program
         {
             int multi = num * i;
             Console.WriteLine($"{num} * {i} = {multi}");
-            Console.WriteLine( num + " * " + i + " = " + result);
+            Console.WriteLine(num + " * " + i + " = " + result);
         }
 
 
@@ -115,7 +169,7 @@ class Program
 
         Console.WriteLine(students.Count);
 
-        Student s1 = new Student("Test", 23,82);
+        Student s1 = new Student("Test", 23, 82);
 
         s1.Display();
 
@@ -158,7 +212,7 @@ class Program
         Console.WriteLine("Highest Number: " + highest);
 
         List<int> numbs = new List<int> { 5, 10, 15, 20, 25, 30 };
-        
+
         var result = numbs.Where(n => n > 15);
         foreach (var n in result)
         {
@@ -211,6 +265,64 @@ class Program
 
         bool result2 = a.Equals(b, StringComparison.OrdinalIgnoreCase);
         Console.WriteLine(result2);
+
+        // Try Catch Block 
+
+        Console.WriteLine("Please Enter the Number: ");
+        String s = Console.ReadLine();
+
+        if(!int.TryParse(s, out int x))
+        {
+            Console.WriteLine("Invalid Number please enter valid number only");
+        }
+        else
+        {
+            try
+            {
+                int result = 100 / x;
+                Console.WriteLine("100 / " + x + " = " + result);
+            }
+            catch(DivideByZeroException)
+            {
+                Console.WriteLine("Cannot divide by zero.");
+            }
+        }
+
+        // Manage Contact with Try catch block 
+
+        var contacts = new List<Contact>();
+        bool isquit = false;
+
+        while (!isquit)
+        {
+            Console.WriteLine("1 Add  2 List  3 Remove  4 Exit");
+            Console.Write("Choice: ");
+            string choice = Console.ReadLine();
+
+            switch(choice)
+            {
+                case "1":
+                    AddContact(contacts);
+                    break;
+
+                case "2":
+                    ListContact(contacts); 
+                    break;
+
+                case "3":
+                    RemoveContact(contacts);
+                    break;
+
+                case "4":
+                    isquit = true;
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid choice.");
+                    break;
+            }
+            Console.WriteLine();
+        }
 
     }
 
