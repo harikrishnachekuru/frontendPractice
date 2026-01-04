@@ -1,0 +1,25 @@
+<h2>Students</h2>
+
+<button routerLink="students/add">Add</button>
+<ul>
+    @for(s of students; track s.id) {
+    <li>
+        {{ s.name }} - {{ s.age }}
+    </li>
+    }
+</ul>
+
+<button (click)="logout()">Logout</button>
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        @for(s of students; track s.id) {
+        <td>{{ s.name }}</td>
+        <td>{{ s.age }}</td>
+        }
+    </tr>
+</table>
