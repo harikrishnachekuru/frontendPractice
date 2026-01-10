@@ -67,3 +67,5 @@ function removeDup(arr){
   return result;
 }
 console.log(removeDup([1,2,32,3,2,1,2,32]));
+
+const newUnique = [...new Map(arr.map(item => [item, true])).keys()];
